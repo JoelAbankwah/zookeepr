@@ -12,6 +12,8 @@ app.use(express.urlencoded({ extended: true }));
 // parse incoming JSON data
 app.use(express.json());
 
+app.use(express.static('public'));
+
 app.get('/api/animals', (req, res) => {
     let results = animals;
     if (req.query) {
@@ -114,6 +116,10 @@ function validateAnimal(animal) {
   }
   return true;
 }
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/index.html'));
+});
 
 app.listen(PORT, () => {
     console.log(`API server now on port ${PORT}!`);
