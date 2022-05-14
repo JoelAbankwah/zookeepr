@@ -138,17 +138,6 @@
         "hungry"
       ],
       "id": "13"
-    },
-    {
-      "name": "Me",
-      "species": "donkey",
-      "diet": "herbivore",
-      "personalityTraits": [
-        "anxious",
-        "loving",
-        "goofy"
-      ],
-      "id": "14"
     }
   ]
 }
